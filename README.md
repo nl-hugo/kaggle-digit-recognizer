@@ -65,7 +65,13 @@ The file `train.m` trains the classifier as follows:
 - Train the classifier with `oneVsAll.m`
 - Predict the training data to determine its accuracy
 
-Training with 100 randomly selected samples yields a training accuracy of 91% and with a set of 5000 samples 87%.
+Training with a various number of randomly selected samples yields the following accuracy:
+
+| Sample size | Accuracy |
+|-------------|----------|
+| 100         | 91%      |
+| 5000        | 87%      |
+| 10000       | 84%      |
 
 
 ### Predicting
