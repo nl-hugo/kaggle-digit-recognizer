@@ -12,7 +12,6 @@ fprintf('Loading and Visualizing Data ...\n')
 
 % Read the training data, stored in arrays X, y
 [X, y] = loadData('data/train.csv', input_layer_size); 
-%[X, y] = loadData('data/train_30000.csv', input_layer_size); 
 
 % Randomly choose 100 training samples
 rand_indices = randperm(size(X, 1));

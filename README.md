@@ -94,7 +94,7 @@ Training with a various number of randomly selected samples yields the following
 | 25000       | 83.0%          | 81.47%      |
 
 
-![sample size](/media/sample_size.png "Sample size")
+![sample size](/media/sample_sizes.png "Sample size")
 
 
 Improvements that I am planning to make:
