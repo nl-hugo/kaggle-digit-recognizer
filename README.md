@@ -65,7 +65,7 @@ The file `train.m` trains the classifier as follows:
 - Train the classifier with `oneVsAll.m`
 - Predict the training data to determine its accuracy
 
-Training with 100 randomly selected samples yields a training accuracy of 91%.
+Training with 100 randomly selected samples yields a training accuracy of 91% and with a set of 5000 samples 87%.
 
 
 ### Predicting
@@ -79,7 +79,11 @@ The file `test.m` predicts the labels using the trained classifier as follows:
 
 ## Results
 
-The initial [submission](https://www.kaggle.com/hjanssen/results) yielded a result of 0.60786. 
+See my results at the [submission](https://www.kaggle.com/hjanssen/results) page.
+
+1. The initial version with 100 train samples yielded a result of 0.60786 
+2. After increasing the number of training set samples to 5000: 0.79214
+
 
 Improvements that I am planning to make:
 
