@@ -5,13 +5,23 @@
 
 This repository contains the code to classify hand written digits for the Kaggle [Digit Recognizer](https://www.kaggle.com/c/digit-recognizer) competition. The goal in this competition is to take an image of a handwritten single digit, and determine what that digit is.
 
+The code is written in Octave and implements a neural network classifier.
+
+![digit recognition](/media/screenshot.png "Digit Recognition")
+
+
+## Data
+
+The data for this competition were taken from the MNIST dataset. The MNIST ("Modified National Institute of Standards and Technology") dataset is a classic within the Machine Learning community that has been extensively studied.  More detail about the dataset, including Machine Learning algorithms that have been tried on it and their levels of success, can be found at http://yann.lecun.com/exdb/mnist/index.html.
+
 
 ## Source Code Layout
 
 The code is adapted from the project assignment that I completed for Coursera's [Machine Learning](https://www.coursera.org/learn/machine-learning) course.
 
 	displayData.m		 	Displays 2D data stored in X
-	fmincg.m				Minimizes a continuous differentialble multivariate function (by Carl Edward Rasmussen)
+	fmincg.m				Minimizes a continuous differentialble multivariate function (by Carl 
+							Edward Rasmussen)
 	loadData.m				Loads data from the specified file
 	lrCostFunction.m		Computes cost and gradient for logistic regression with regularization
 	oneVsAll.m				Trains multiple logistic regression classifiers
@@ -25,13 +35,10 @@ The code is adapted from the project assignment that I completed for Coursera's 
 
 ## Getting Data
 
-The data for this competition were taken from the MNIST dataset. The MNIST ("Modified National Institute of Standards and Technology") dataset is a classic within the Machine Learning community that has been extensively studied.  More detail about the dataset, including Machine Learning algorithms that have been tried on it and their levels of success, can be found at http://yann.lecun.com/exdb/mnist/index.html.
+The raw data files are downloaded from the Kaggle [project website](https://www.kaggle.com/c/digit-recognizer/data) and contain gray-scale images of hand-drawn digits, from zero through nine. It contains the following files:
 
-The raw data files are downloaded from the Kaggle [project website](https://www.kaggle.com/c/digit-recognizer/data) and contain gray-scale images of hand-drawn digits, from zero through nine.
-
-It contains the following files:
-
-	train.csv	the training data set with 42000 images, including a label in the first column with the digit that was drawn.		
+	train.csv	the training data set with 42000 images, including a label in the first column with
+				the digit that was drawn.		
 	test.csv	the test data set with 28000 images
 
 
