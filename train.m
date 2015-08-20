@@ -6,7 +6,7 @@ clear ; close all; clc
 input_layer_size  = 784;  % 28x28 Input Images of Digits
 num_labels = 10;          % 10 labels, from 1 to 10   
                           % (note that we have mapped "0" to label 10)
-num_samples = 5000;       % use 5000 training samples
+num_samples = 10000;      % use 10000 training samples
                         
 % Load Training Data
 fprintf('Loading and Visualizing Data ...\n')

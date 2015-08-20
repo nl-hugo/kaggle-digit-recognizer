@@ -52,10 +52,13 @@ The file `loadData.m` loads the data as follows:
 - Read the data from the csv file
 - Remove the header row
 - For training data, store the labels as variable y
+- Rotate the data set so that the digits are displayed upright
 - Return pixel data as X, labels as y (for training data only)
 
+Note that this function is called from the `train.m` and `test.m` scripts.
 
-### Training
+
+### Train
 
 The file `train.m` trains the classifier as follows:
 
@@ -74,7 +77,7 @@ Training with a various number of randomly selected samples yields the following
 | 10000       | 84%      |
 
 
-### Predicting
+### Predict
 
 The file `test.m` predicts the labels using the trained classifier as follows:
 
@@ -89,7 +92,7 @@ See my results at the [submission](https://www.kaggle.com/hjanssen/results) page
 
 1. The initial version with 100 train samples yielded a result of 0.60786 
 2. After increasing the number of training set samples to 5000: 0.79214
-
+3. After increasing the number of training set samples to 10000: 0.80800
 
 Improvements that I am planning to make:
 
