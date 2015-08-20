@@ -1,4 +1,3 @@
-
 %% Initialization
 clear ; close all; clc
 
@@ -6,14 +5,14 @@ clear ; close all; clc
 input_layer_size  = 784;  % 28x28 Input Images of Digits
 num_labels = 10;          % 10 labels, from 1 to 10   
                           % (note that we have mapped "0" to label 10)
-num_samples = 10000;      % use 10000 training samples
+num_samples = 30000;      % use 25000 training samples
                         
 % Load Training Data
 fprintf('Loading and Visualizing Data ...\n')
 
 % Read the training data, stored in arrays X, y
-%[X, y] = loadData('data/train.csv', input_layer_size); 
-[X, y] = loadData('data/train_10000.csv', input_layer_size); 
+[X, y] = loadData('data/train.csv', input_layer_size); 
+%[X, y] = loadData('data/train_30000.csv', input_layer_size); 
 
 % Randomly choose 100 training samples
 rand_indices = randperm(size(X, 1));
@@ -32,6 +31,9 @@ fprintf('\nTraining One-vs-All Logistic Regression...\n')
 lambda = 0.1;
 [all_theta] = oneVsAll(X, y, num_labels, lambda);
 
+% Save model parameters
+fprintf('Save model parameters...\n')
+save('all_theta.mat', 'all_theta');
 
 % Predict for One-Vs-All
 pred = predictOneVsAll(all_theta, X);

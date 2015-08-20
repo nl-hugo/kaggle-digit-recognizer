@@ -1,6 +1,5 @@
-
 %% Initialization
-%clear ; close all; clc
+clear ; close all; clc
 
 %% Setup the parameters for this step
 input_layer_size  = 784;  % 28x28 Input Images of Digits
@@ -15,7 +14,12 @@ fprintf('\nNumber of rows: %d \n', m);
 sel = X(1:100, :);
 displayData(sel);
 
+% Save model parameters
+fprintf('Load model parameters ...\n')
+load('all_theta.mat');
+
 % Predict for One-vs-All 
+fprintf('Predict ...\n')
 pred = predictOneVsAll(all_theta, X);
 
 % Add column with image index
@@ -23,6 +27,7 @@ idx = reshape(linspace(1, m, m), m, 1);
 pred = [idx pred];
 
 % Write results
+fprintf('Write results ...\n')
 header = 'ImageId,Label'; 
 dlmwrite('results.csv', header, 'delimiter', '');
 dlmwrite('results.csv', pred, 'delimiter', ',' , '-append');
