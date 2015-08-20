@@ -17,6 +17,7 @@ if size(X, 2) > n
   X = X(:, 2:end);  % other columns are pixel data
 end
 
-% TODO: digits are displayed flipped and mirrored
+% Digits are displayed flipped and mirrored
+X = rotateData(X);
 
 end
