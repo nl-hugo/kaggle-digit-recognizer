@@ -66,15 +66,8 @@ The file `train.m` trains the classifier as follows:
 - Randomly select a specified number of samples
 - Display the first 100 images
 - Train the classifier with `oneVsAll.m`
+- Write model parameters to `all_theta.mat`
 - Predict the training data to determine its accuracy
-
-Training with a various number of randomly selected samples yields the following accuracy:
-
-| Sample size | Accuracy |
-|-------------|----------|
-| 100         | 91%      |
-| 5000        | 87%      |
-| 10000       | 84%      |
 
 
 ### Predict
@@ -82,21 +75,30 @@ Training with a various number of randomly selected samples yields the following
 The file `test.m` predicts the labels using the trained classifier as follows:
 
 - Load the test data using `loadData.m`
+- Read model parameters from `all_theta.mat`
 - Predict the labels for the test data 
 - Write results
 
 
 ## Results
 
-See my results at the [submission](https://www.kaggle.com/hjanssen/results) page.
+Training with a various number of randomly selected samples yields the following train accuracy and [submission](https://www.kaggle.com/hjanssen/results) results:
 
-1. The initial version with 100 train samples yielded a result of 0.60786 
-2. After increasing the number of training set samples to 5000: 0.79214
-3. After increasing the number of training set samples to 10000: 0.80800
+| Sample Size | Train Accuracy | Test Result |
+|-------------|----------------|-------------|
+| 100         | 91.0%          | 60.78%      |  
+| 5000        | 86.7%          | 79.21%      |
+| 10000       | 84.0%          | 80.80%      |
+| 15000       | 83.5%          | 81.40%      |
+| 20000       | 83.5%          | 81.47%      |
+| 25000       | 83.0%          | 81.47%      |
+
+
+![sample size](/media/sample_size.png "Sample size")
+
 
 Improvements that I am planning to make:
 
 - double check the inner workings of the scripts to make sure everything works OK.
-- increase the number of training samples (but I need to make Octave stop from crashing first...)
 - try different learning parameters
 
