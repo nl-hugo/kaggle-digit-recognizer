@@ -19,11 +19,12 @@ The data for this competition were taken from the MNIST dataset. The MNIST ("Mod
 
 The code is adapted from the project assignment that I completed for Coursera's [Machine Learning](https://www.coursera.org/learn/machine-learning) course.
 
-	displayData.m		 	Displays 2D data stored in X
-	fmincg.m				Minimizes a continuous differentialble multivariate function (by Carl 
-							Edward Rasmussen)
+	displayData.m		 	Displays 2D data stored in X (by course staff)
+	fmincg.m				Minimizes a continuous differentialble multivariate function (by 
+							Carl Edward Rasmussen)
 	loadData.m				Loads data from the specified file
-	lrCostFunction.m		Computes cost and gradient for logistic regression with regularization
+	lrCostFunction.m		Computes cost and gradient for logistic regression with 
+							regularization
 	oneVsAll.m				Trains multiple logistic regression classifiers
 	predict.m				Predicts the label of an input given a trained neural network
 	predictOneVsAll.m		Predicts the label for a trained one-vs-all classifier
@@ -37,8 +38,8 @@ The code is adapted from the project assignment that I completed for Coursera's 
 
 The raw data files are downloaded from the Kaggle [project website](https://www.kaggle.com/c/digit-recognizer/data) and contain gray-scale images of hand-drawn digits, from zero through nine. It contains the following files:
 
-	train.csv	the training data set with 42000 images, including a label in the first column with
-				the digit that was drawn.		
+	train.csv	the training data set with 42000 images, including a label in the first column 
+				with the digit that was drawn.		
 	test.csv	the test data set with 28000 images
 
 
